@@ -16,7 +16,7 @@ El equipo comparte el grupo 5 de TASKS_INTEGRATION.md. Los cuatro ejercicios del
 | Integrante | Bloques | Aporte |
 |---|---|---|
 | Ángel Rosales, AngelRosales78 | A y B: asignaciones y consultas | Controlador, soporte comun y seis pruebas H2 mas seis Mockito |
-| Diego Magallanes, DiegoMagallanes11 | C y D: principal, experiencia y certificacion | Pendiente de implementar, probar y subir desde su cuenta |
+| Diego Magallanes, DiegoMagallanes11 | C y D: principal, experiencia y certificacion | Endpoints C+D, seis escenarios en ambas modalidades y seis pruebas negativas adicionales |
 
 ## Ejecutar
 
@@ -39,7 +39,7 @@ VetSpecialtyControllerTest utiliza MockMvc, el stack real y datos semilla de H2.
 
 ## Trabajo de Diego
 
-Seguir [la guia de contribucion de Diego](docs/TRABAJO_DIEGO.md). Su aporte es implementar los endpoints C+D y agregar sus doce pruebas (seis reales y seis Mockito), con su propia rama, commits y PR. Los metodos del servicio ya existen como soporte reutilizado; no cuentan como contribucion nueva de Diego.
+El aporte C+D se implemento en feature/diego-lab12-principal-experiencia, basada en la rama A+B de Angel mientras su PR seguia abierto. Incluye los doce escenarios requeridos (seis por modalidad) y seis pruebas negativas adicionales. Los metodos del servicio ya existian como soporte de Angel; no se atribuyen como contribucion nueva de Diego.
 
 No se hacen commits en nombre del compañero. Cada uno revisa el PR del otro antes de integrar. La base main conserva el proyecto original; los cambios del laboratorio se proponen mediante PR.
 
@@ -47,8 +47,8 @@ No se hacen commits en nombre del compañero. Cada uno revisa el PR del otro ant
 
 Ángel: preparacion del repositorio, soporte comun del grupo 5, endpoints A+B y doce pruebas web. Resultados reales en [RESULTADOS_ANGEL.md](docs/RESULTADOS_ANGEL.md).
 
-Diego: pendiente de su implementacion y sus commits reales. Nadie ha firmado cambios con su identidad.
+Diego: endpoints de principal, experiencia y certificacion, filtro opcional por experiencia y 18 pruebas nuevas (nueve H2 y nueve Mockito), conservando las doce de Angel. Explicacion en [EXPLICACION_DIEGO.md](docs/EXPLICACION_DIEGO.md).
 
 Conflictos resueltos: ninguno hasta el momento. No se inventan conflictos ni merges. Se debe documentar el conflicto que ocurra realmente, indicando archivos, resolucion y commit.
 
-Pendientes de entrega: aporte C+D de Diego, revisiones y merges de ambos integrantes, evidencia real del conflicto, capturas del historial y de la suite completa, informe y tres conclusiones del laboratorio.
+Validacion conjunta realizada: 57 pruebas, 0 fallos, 0 errores y 0 omitidas. Se conserva el detalle en RESULTADOS_DIEGO.md. Pendientes de entrega: revisiones y merges de ambos integrantes, evidencia real del conflicto, capturas e informe con conclusiones. No se reutiliza la practica de conflicto del laboratorio 11 como evidencia de este laboratorio.
