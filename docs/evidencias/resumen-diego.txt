@@ -1,0 +1,13 @@
+Hibernate: select v1_0.id,v1_0.active,v1_0.email,v1_0.first_name,v1_0.last_name,v1_0.phone from vet_specialties vs1_0 join vets v1_0 on v1_0.id=vs1_0.vet_id where vs1_0.specialty_id=? order by vs1_0.vet_id
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.728 s -- in com.tecsup.petclinic.webs.VetSpecialtyControllerTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 57, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:26 min
+[INFO] Finished at: 2026-11-03T15:09:25-05:00
+[INFO] ------------------------------------------------------------------------

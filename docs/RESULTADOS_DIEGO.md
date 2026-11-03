@@ -16,4 +16,6 @@ Las otras 27 pruebas pertenecen al proyecto base. No se atribuyen a Diego. Las d
 
 Se verifican JSON, codigos HTTP 200, 400 y 404 y los argumentos de delegacion. En H2 se comprueba la persistencia de principal, experiencia y certificacion y la ausencia de cambios ante entradas invalidas. El filtro usa casos positivos, limite inclusivo, un candidato excluido y lista vacia. El esquema y los datos iniciales no fueron modificados.
 
+Tambien se ejecuto `mvnw.cmd -B clean test -Dspring.profiles.active=h2` con un archivo de log independiente: 57 pruebas, 0 fallos, 0 errores y 0 omitidas; BUILD SUCCESS. El resumen original se conserva en docs/evidencias/resumen-diego.txt.
+
 Los informes reales se generan en target/surefire-reports. El PR debe ser revisado por Angel antes de integrarse. Todavia no se ha resuelto un conflicto en este laboratorio; no se presenta como completado.
