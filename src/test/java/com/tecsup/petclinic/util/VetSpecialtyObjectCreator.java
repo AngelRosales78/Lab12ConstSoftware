@@ -10,6 +10,16 @@ public final class VetSpecialtyObjectCreator {
         return new VetSpecialty(new VetSpecialtyId(vetId, specialtyId));
     }
 
+    /** Respuesta plana del servicio para los escenarios C+D de Diego. */
+    public static VetSpecialty assignment(int vetId, int specialtyId, boolean primary, int years,
+            java.time.LocalDate certification) {
+        VetSpecialty assignment = assignment(vetId, specialtyId);
+        assignment.setPrimarySpecialty(primary);
+        assignment.setYearsExperience(years);
+        assignment.setCertificationDate(certification);
+        return assignment;
+    }
+
     public static Specialty specialty(int id, String name) {
         Specialty specialty = new Specialty();
         specialty.setId(id);
