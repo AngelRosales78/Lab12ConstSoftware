@@ -1,0 +1,23 @@
+name: Pruebas laboratorio 12
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  pruebas:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+      - run: chmod +x mvnw
+      - run: ./mvnw -B clean test -Dspring.profiles.active=h2
+        env:
+          LOGGING_FILE_NAME: logs/application.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: resultados-laboratorio-12
+          path: target/surefire-reports/

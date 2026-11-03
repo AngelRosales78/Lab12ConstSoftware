@@ -2,31 +2,25 @@ package com.tecsup.petclinic.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-
+import lombok.EqualsAndHashCode;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.Set;
 
-/**
- * 
- * @author jgomezm
- *
- */
-@NoArgsConstructor
 @Entity(name = "specialties")
+@Table(name = "specialties")
 @Data
+@NoArgsConstructor
 public class Specialty {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    private String name;
+    private String office;
+    @Column(name = "h_open") private Integer openingHour;
+    @Column(name = "h_close") private Integer closingHour;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
-
-	@Column(name = "name")
-	private String name;
-
-	@ManyToMany(mappedBy = "specialties", fetch = FetchType.LAZY)
-	@ToString.Exclude
-	//@EqualsAndHashCode.Exclude
-	private Set<Vet> vets;
+    @ManyToMany(mappedBy = "specialties", fetch = FetchType.LAZY)
+    @JsonIgnore @ToString.Exclude @EqualsAndHashCode.Exclude
+    private Set<Vet> vets;
 }
